@@ -17,11 +17,7 @@ $( document ).ready(function() {
 		function displayCorrect(){
 			$('.correct').css('display', 'block');
 			correct++;
-			setTimeout(function(){ 
-								$('.correct').css('display', 'none');
-								showText(1);
-								}, 1500);
-							clearInterval(counter);
+			
 		}
 		function displayWrong(){
 			$('.wrong').css('display', 'block');
@@ -72,11 +68,11 @@ $( document ).ready(function() {
 						$('.choice2').on("click", function(){
 							$('#outPut').css('display', 'none');
 							displayCorrect();
-							// setTimeout(function(){ 
-							// 	$('.correct').css('display', 'none');
-							// 	showText(1);
-							// 	}, 1500);
-							// clearInterval(counter);							
+							setTimeout(function(){ 
+								$('.correct').css('display', 'none');
+								showText(1);
+								}, 1500);
+							clearInterval(counter);							
 						})
 						$('.choice1').on("click", function(){
 							setTimeout(function(){
